@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <td>            
+            <lebal-component [message]="'Usrename'"></lebal-component>
+        </td>
+        <td>   <input [(ngModel)]="userName" > </td>
+    </tr>
+    <tr>
+    <td>
+        <lebal-component [message]="'Password'"></lebal-component>
+    </td>
+    <td> <input #passwordTextBox type="text" (input)="onPasswordEdit(passwordTextBox.value) "
+        [value]="password"> </td>
+    </tr>
+<tr>
+<td> <button (click)="signup()">login</button> </td>
+<td> <button (click)="clear()">clear</button></td>
+</tr>
+</table>
